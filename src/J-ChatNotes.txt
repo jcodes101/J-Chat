@@ -1,0 +1,32 @@
+- Each message that is posted in the chat is a
+document in the firestore database and it
+contains the... text, uid, and timestamp for that message.
+
+- A query is being made to the database with the most
+recent messages
+
+// Step 1: Log in to your Firebase account via the CLI
+// firebase login
+
+// Step 2: Initialize Firebase in your current project directory
+// - Choose the Firebase services you want (e.g., Hosting, Functions, Firestore)
+// - Connect to an existing Firebase project or create a new one
+// - Creates config files like firebase.json
+//firebase init
+
+// Step 3: Deploy your project to Firebase
+// - Pushes your local project to the Firebase cloud
+// - Uploads files and services based on what was set up in init (e.g., hosting, functions)
+// firebase deploy
+
+//Firebase databse rules:
+// collectionID: any name
+// documentID: auto-generated
+// field: text | type: string | value: any string
+// field: createdAt | type: timestamp |
+// date: the current date and time
+
+// the (rel="noopener noreferrer) is what prevents the 
+new page/window that is opened using (target="_blank") from
+accesing the original page's window.opener and it also won't
+recieve the Referer header

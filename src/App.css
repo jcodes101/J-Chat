@@ -1,38 +1,229 @@
 .App {
   text-align: center;
+  min-height: 100vh;
+  position: relative;
+  background-color: #000;
+  z-index: 1;
 }
 
-.App-logo {
-  height: 40vmin;
+.squares-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+  background-color: #000;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.content-container {
+  position: relative;
+  z-index: 1;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Social Media Icons CSS */
+
+.socials-container{
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  gap: 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.github-icon{
+  color: #ff5454;
+  text-shadow: #ff5454;
+  font-size: 3rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.instagram-icon{
+  color: #ff5454;
+  text-shadow: #ff5454;
+  font-size: 2.7rem;
+}
+
+.jchat-header{
+  color: rgb(224, 76, 76);
+  font-size: 4rem;
+  padding-top: 0%;
+  margin-top: 0%;
+  -webkit-text-stroke: 1px #000000;
+  text-shadow: 2px 5px 20px rgb(212, 54, 48);
+  font-family: 'Sixtyfour Convergence', sans-serif;
+}
+
+.welcome-p{
+  color: rgb(217, 100, 100);
+  font-size: 1.5rem;
+  -webkit-text-stroke: 0.8px #000000;
+  text-shadow: 2px 5px 20px rgb(205, 62, 62);
+  font-family: "Jersey 15", sans-serif;
+}
+
+/* Sign-In Button CSS */
+.sign-in-btn{
+  background-color: #6e0000;
+  border-radius: 100px;
+  box-shadow: rgba(237, 13, 13, 0.2) 0 -25px 18px -14px inset,rgba(229, 70, 70, 0.15) 0 1px 2px,rgba(222, 23, 23, 0.15) 0 2px 4px,rgba(222, 27, 27, 0.15) 0 4px 8px,rgba(231, 37, 37, 0.15) 0 8px 16px,rgba(200, 52, 22, 0.15) 0 16px 32px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Sixtyfour Convergence",sans-serif;
+  padding: 7px 20px;
+  padding-bottom: px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.sign-in-btn:hover{
+  box-shadow: rgba(226, 118, 23, 0.35) 0 -25px 18px -14px inset,rgba(185, 116, 13, 0.25) 0 1px 2px,rgba(210, 219, 38, 0.25) 0 2px 4px,rgba(208, 88, 7, 0.25) 0 4px 8px,rgba(203, 85, 26, 0.25) 0 8px 16px,rgba(214, 77, 27, 0.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+}
+
+/* Sign-Out Button CSS */
+.sign-out-btn {
+  background-color: #6e0000;
+  border-radius: 100px;
+  box-shadow: rgba(237, 13, 13, 0.2) 0 -25px 18px -14px inset,rgba(229, 70, 70, 0.15) 0 1px 2px,rgba(222, 23, 23, 0.15) 0 2px 4px,rgba(222, 27, 27, 0.15) 0 4px 8px,rgba(231, 37, 37, 0.15) 0 8px 16px,rgba(200, 52, 22, 0.15) 0 16px 32px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Sixtyfour Convergence",sans-serif;
+  padding: 7px 20px;
+  padding-bottom: px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.sign-out-btn:hover {
+  box-shadow: rgba(226, 118, 23, 0.35) 0 -25px 18px -14px inset,rgba(185, 116, 13, 0.25) 0 1px 2px,rgba(210, 219, 38, 0.25) 0 2px 4px,rgba(208, 88, 7, 0.25) 0 4px 8px,rgba(203, 85, 26, 0.25) 0 8px 16px,rgba(214, 77, 27, 0.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+}
+
+/* User Image & Name CSS */
+.user-imgs{
+  border-radius: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+.user-name-container{
+  color: #000000;
+  font-family: "Jersey 15", sans-serif;
+  font-size: 1rem;
+}
+
+.user-name-name{
+  color: #ffbdbd;
+  text-decoration: underline;
+}
+
+/* Chat Container CSS */
+.chat-container {
+  background-color: #ef6060;
+  opacity: 0.9;
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 750px;
+}
+
+/* Chat Message Box CSS */
+.chat-messages {
+  color: hsl(0, 0%, 100%);
+  font-family: "Jersey 15", sans-serif;
+}
+
+.chat-form-input {
+  border-radius: 10px;
+  outline: 2px solid #000000;
+  border: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #b1b1b1;
+  outline-offset: 3px;
+  padding: 10px 1rem;
+  transition: 0.25s;
+}
+
+.chat-form-input:focus {
+  outline-offset: 5px;
+  background-color: #fff
+}
+
+/* Send Button CSS */
+.submit-txt-btn {
+  --glow-color: rgb(255, 116, 116);
+  --glow-spread-color: rgba(255, 39, 39, 0.781);
+  --enhanced-glow-color: rgb(255, 199, 199);
+  --btn-color: rgb(134, 16, 0);
+  border: .25em solid var(--glow-color);
+  padding: 1em 3em;
+  margin-left: 10px;
+  color: var(--glow-color);
+  font-size: 11px;
+  font-weight: bold;
+  background-color: var(--btn-color);
+  border-radius: 1em;
+  outline: none;
+  box-shadow: 0 0 1em .25em var(--glow-color),
+         0 0 4em 1em var(--glow-spread-color),
+         inset 0 0 .75em .25em var(--glow-color);
+  text-shadow: 0 0 .5em var(--glow-color);
+  position: relative;
+  transition: all 0.3s;
+}
+ 
+.submit-txt-btn::after {
+pointer-events: none;
+content: "";
+position: absolute;
+top: 120%;
+left: 0;
+height: 100%;
+width: 100%;
+background-color: var(--glow-spread-color);
+filter: blur(2em);
+opacity: .7;
+transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+}
+ 
+.submit-txt-btn:hover {
+color: var(--btn-color);
+background-color: var(--glow-color);
+box-shadow: 0 0 1em .25em var(--glow-color),
+        0 0 4em 2em var(--glow-spread-color),
+        inset 0 0 .75em .25em var(--glow-color);
+}
+ 
+.submit-txt-btn:active {
+box-shadow: 0 0 0.6em .25em var(--glow-color),
+        0 0 2.5em 2em var(--glow-spread-color),
+        inset 0 0 .5em .25em var(--glow-color);
 }

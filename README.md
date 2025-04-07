@@ -78,20 +78,10 @@ The app updates in real-time, so new messages appear instantly.
 You can sign out from the app by clicking the "Sign Out" button.
 
 Contributing
-Contributions are welcome! Feel free to fork the repository, make changes, and submit a pull request.
-
-Fork the repository
-
-Create a new branch (git checkout -b feature-branch)
-
-Make your changes and commit them (git commit -am 'Add feature')
-
-Push to the branch (git push origin feature-branch)
-
-Open a pull request
+This repository is not open for contributions. Please do not create pull requests or attempt to push changes to the original repository. However, you are welcome to fork the repository and create your own version of the project. You may make any changes or improvements to your fork, but please respect the fact that no changes will be accepted into the original project except by the project owner.
 
 License
-This project is open-source and available under the MIT License.
+This project is not open-source. All rights reserved.
 
 Social Links
 GitHub
@@ -100,8 +90,8 @@ Instagram
 
 Enjoy chatting in Retro J-Chat! 🚀
 
-vbnet
+pgsql
 Copy
 Edit
 
-Make sure to replace `yourusername` and Firebase config variables with the actual information relevant to your project.
+This version clearly indicates that contributions and pull requests are not accepted, but users are welcome to fork and modify the project as they see fit.

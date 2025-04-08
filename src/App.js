@@ -142,9 +142,9 @@ function SignOut(){
 function ChatMessage(props) {
 
   // destructuring the message object into the message content, user id, and users profile picture
-  const {text, uid, photoURL} = props.message;
+  const {text, uid, photoURL, displayName} = props.message;
   // hooks to get the current logged in user | makes sure you're comparing the current user and message sender
-  const [user] = useAuthState(auth);
+  //* const [user] = useAuthState(auth);
   // compares if the messages uid is the same as the current user's id
   // if so it will be 'sent', otherwise it will be 'received'
   const messageClass = uid === auth.currentUser?.uid ? 'sent' : 'received';
@@ -154,7 +154,7 @@ function ChatMessage(props) {
       <img className="user-imgs" src={photoURL} alt="user profile"/>
       <p 
       className="user-name-container">
-      <span className="user-name-name">{user.displayName}</span> said:</p>
+      <span className="user-name-name">{displayName || "Anonymous"}</span> said:</p>
       <p>{text}</p>
     </div>
   )
@@ -186,14 +186,15 @@ function ChatRoom() {
     if (!formValue.trim()) return;
 
     // deconstrocts the current useers user id and profile picture
-    const {uid, photoURL} = auth.currentUser;
+    const {uid, photoURL, displayName} = auth.currentUser;
 
     // adds a new mesage to the message collection in Firestore
     await addDoc(messagesRef,{
       text: formValue,
       createdAt: serverTimestamp(),
       uid,
-      photoURL
+      photoURL,
+      displayName
     })
     // resets the form value to an empty string after the message is sent
     setFormValue('');

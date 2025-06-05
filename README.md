@@ -2,6 +2,8 @@
 
 Retro J-Chat is a social chat application where users can chat with their friends in real-time. The app uses Firebase for authentication and real-time messaging, providing a seamless experience where messages appear instantly as they're sent. Users can sign in using their Google account, and the app includes a retro aesthetic with interactive UI elements.
 
+# Check it out here!: https://retrojchat.netlify.app
+
 ## 🚀 Features
 
 - **Real-Time Messaging**: Chat with friends in real-time using Firebase Firestore.
